@@ -1,0 +1,90 @@
+.schedule .filters {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.schedule .filters li {
+  color: white;
+  padding: 10px 25px;
+  background: #191919;
+  transition: 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.schedule .filters li:hover,
+.schedule .filters li.active {
+  background: var(--primary);
+}
+.calendar-icon {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #191919;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.calendar-icon:hover {
+  background: var(--primary);
+}
+/* .pagination {
+  justify-content: center;
+}
+
+.pagination .page-link {
+  color: white;
+  background: #191919;
+}
+.pagination .page-link:hover {
+  background: var(--primary);
+}
+.page-link.active {
+  background: var(--primary);
+  border-color: white;
+} */
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.5s ease-in-out;
+}
+
+.movies-container.swipe-right {
+  transform: translateX(-100%);
+}
+.pagination {
+  justify-content: center;
+}
+.pagination :active {
+  border-color: white;
+}
+.page-link {
+  color: white;
+  outline: none;
+
+  background: #191919;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.page-link.active {
+  background: var(--primary);
+  border-color: white;
+}
+.page-link:hover {
+  background: var(--primary);
+  color: white;
+}
+.page-link:focus {
+  outline: none;
+}
+
+.page-item {
+  justify-content: center;
+  align-items: center;
+}

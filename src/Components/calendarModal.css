@@ -1,0 +1,19 @@
+.close-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #191919;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: var(--primary);
+}
+.ReactModal__Overlay {
+  z-index: 9999; /* Ensure the overlay is above other content */
+}
+
+.ReactModal__Content {
+  z-index: 10000; /* Ensure the content is above the overlay */
+}

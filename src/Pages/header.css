@@ -1,0 +1,157 @@
+/* header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  transition: 0.5s;
+  z-index: 10000;
+}
+header.scrolled {
+  background: rgb(0, 0, 0, 0.6);
+  border-bottom: 2px solid var(--primary);
+  border-image: linear-gradient(90deg, transparent, var(--primary), transparent)
+    30;
+  backdrop-filter: blur(20px);
+  padding: 10px 100px;
+}
+.logo {
+  font-family: "Racing Sans One", cursive;
+  font-size: 35px;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.icon {
+  color: var(--primary);
+}
+.nav {
+  display: flex;
+} */
+/* second */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  transition: 0.5s;
+  z-index: 10000;
+}
+header.scrolled {
+  background: rgb(0, 0, 0, 0.6);
+  border-bottom: 2px solid var(--primary);
+  border-image: linear-gradient(90deg, transparent, var(--primary), transparent)
+    30;
+  backdrop-filter: blur(20px);
+  padding: 10px 100px;
+}
+.logo {
+  font-family: "Racing Sans One", cursive;
+  font-size: 35px;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.icon {
+  color: var(--primary);
+}
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav.open {
+  display: block;
+}
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.menu-btn:focus {
+  outline: none;
+}
+.desktop-sign-in {
+  display: flex;
+  align-items: center;
+}
+.mobile-sign-in {
+  display: none;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .desktop-sign-in {
+    display: none;
+  }
+  .mobile-sign-in {
+    display: block;
+    margin-top: 10px;
+  }
+  .nav li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .desktop-sign-in {
+    display: none;
+  }
+  .mobile-sign-in {
+    display: block;
+    margin-top: 10px;
+  }
+  .nav li {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary: #ff3700;
+}
+body {
+  background: black;
+  font-family: "Roboto", sans-serif;
+}
+
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+
+body {
+  --sb-thumb-color: #ff3700;
+  --sb-track-color: #191919;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+  border: 1px solid #303131;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
