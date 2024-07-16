@@ -194,7 +194,7 @@
   
 
 "predeploy":"npm run build",
-"deploy":"gh-pages -d buildS",
+"deploy":"gh-pages -d build",
 
     
 
