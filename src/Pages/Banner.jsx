@@ -11,7 +11,7 @@ function Banner() {
   const [movies, setMovies] = useState([]);
 
   const fetchdata = () => {
-    fetch("http://localhost:3000/Data/movieData.json")
+    fetch("/Movie-Website/Data/movieData.json")
       .then((res) => res.json())
       .then((Data) => setMovies(Data))
       .catch((e) => console.log(e.message));
@@ -38,7 +38,8 @@ function Banner() {
             <img
               src={movie.bgImg}
               alt="Background Images"
-              className={`bgImg ${movie.active ? "active" : undefined}`}
+              // className={`bgImg ${movie.active ? "active" : undefined}`}
+              className={`bgImg ${movie.active ? "active" : ""}`}
             />
             <div className="container-fluid">
               <div className="row">

@@ -363,7 +363,7 @@ function Schedule() {
   const [swipe, setSwipe] = useState(false);
 
   const fetchdata = () => {
-    fetch("http://localhost:3000/Data/movieData.json")
+    fetch("/Movie-Website/Data/movieData.json")
       .then((res) => res.json())
       .then((Data) => setData(Data))
       .catch((e) => console.log(e.message));
@@ -438,7 +438,8 @@ function Schedule() {
             {filters.map((filter) => (
               <li
                 key={filter._id}
-                className={`${filter.active ? "active" : undefined}`}
+                // className={`${filter.active ? "active" : undefined}`}
+                className={`${filter.active ? "active" : ""}`}
                 onClick={() => {
                   handleFilterMovie(filter.name);
                 }}
@@ -452,6 +453,7 @@ function Schedule() {
           </ul>
         </div>
         <div
+          // className={`row mt-5 movies-container ${swipe ? "swipe-right" : ""}`}
           className={`row mt-5 movies-container ${swipe ? "swipe-right" : ""}`}
         >
           {currentMovies &&
@@ -470,6 +472,9 @@ function Schedule() {
                     className={`page-link ${
                       currentPage === index + 1 ? "active" : ""
                     }`}
+                    // className={`page-link ${
+                    //   currentPage === index + 1 ? "active" : ""
+                    // }`}
                     onFocus={(e) => e.target.blur()}
                   >
                     {index + 1}
@@ -491,3 +496,5 @@ function Schedule() {
 }
 
 export default Schedule;
+
+// last

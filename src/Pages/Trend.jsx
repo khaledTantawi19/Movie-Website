@@ -12,7 +12,7 @@ import { Autoplay } from "swiper/modules";
 function Trend() {
   const [slides, setSlides] = useState([]);
   const fetchdata = () => {
-    fetch("http://localhost:3000/Data/movieData.json")
+    fetch("/Movie-Website/Data/movieData.json")
       .then((res) => res.json())
       .then((Data) => {
         setSlides(Data);
@@ -37,15 +37,15 @@ function Trend() {
                 spaceBetween: 20,
               },
               480: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 30,
               },
               640: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30,
               },
               992: {
-                slidesPerView: 6,
+                slidesPerView: 4,
                 spaceBetween: 30,
               },
             }}

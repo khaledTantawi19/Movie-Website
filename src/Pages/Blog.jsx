@@ -5,7 +5,7 @@ import BlogCard from "../Components/BlogCard";
 function Blog() {
   const [blogs, setBlogs] = useState([]);
   const fetchdata = () => {
-    fetch("http://localhost:3000/Data/blogData.json")
+    fetch("/Movie-Website/Data/blogData.json")
       .then((res) => res.json())
       .then((Data) => {
         setBlogs(Data);
